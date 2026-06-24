@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Bonacini | Senior Robotics Engineer</title>
+    <meta name="description" content="Senior Robotics Engineer specializing in autonomous systems, state estimation, and sensor fusion at Earthsense.">
+    <meta name="keywords" content="robotics engineer, autonomous systems, state estimation, sensor fusion, ROS2, EKF, SLAM, MPC">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="nav-logo-bracket">[</span>
+                <span class="nav-logo-text">LB</span>
+                <span class="nav-logo-bracket">]</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Open to Consulting &amp; Collaboration</span>
+            </div>
+            <h1 class="hero-name">Leonardo Bonacini</h1>
+            <h2 class="hero-title">
+                Senior Robotics Engineer
+                <span class="hero-sep">|</span>
+                Autonomous Systems
+                <span class="hero-sep">|</span>
+                <span class="hero-company">Earthsense</span>
+                <span class="hero-year">&nbsp;2023–Present</span>
+            </h2>
+            <p class="hero-tagline">
+                Building and deploying autonomous systems in real-world environments.<br>
+                Expert in <span class="accent">state estimation</span>, <span class="accent">sensor fusion</span>, and <span class="accent">field robotics</span>.
+            </p>
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <span class="hero-metric-val">3+</span>
+                    <span class="hero-metric-label">Years at Earthsense</span>
+                </div>
+                <div class="hero-metric-sep"></div>
+                <div class="hero-metric">
+                    <span class="hero-metric-val">Production</span>
+                    <span class="hero-metric-label">Systems Deployed</span>
+                </div>
+                <div class="hero-metric-sep"></div>
+                <div class="hero-metric">
+                    <span class="hero-metric-val">ROS2</span>
+                    <span class="hero-metric-label">Primary Stack</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polygon points="8,1 15,13 1,13" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                    View Projects
+                </a>
+                <a href="https://github.com/leo-bonacini" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="resume.pdf" class="btn btn-outline" download>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v9M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Resume PDF
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span class="hero-scroll-label">scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 01 — about</span>
+                <h2 class="section-title">System Overview</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Senior Robotics Engineer at Earthsense with a focus on building reliable, production-grade autonomous systems that operate in real-world, unstructured environments.
+                    </p>
+                    <p>
+                        My work spans the full autonomous navigation stack — from low-level sensor fusion and state estimation to high-level planning and control. I develop systems that must be robust to real-world constraints: sensor noise, GPS degradation, dynamic obstacles, and unpredictable terrain.
+                    </p>
+                    <p>
+                        I specialize in bridging the gap between academic algorithms and production robotics — taking techniques like EKF, ES-EKF, and MPC from theory to deployed systems running in agricultural fields and complex outdoor environments.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-row">
+                            <div class="highlight-icon">◈</div>
+                            <div>
+                                <strong>System Reliability</strong>
+                                <p>Fault-tolerant systems that gracefully degrade under sensor failure or adverse conditions</p>
+                            </div>
+                        </div>
+                        <div class="highlight-row">
+                            <div class="highlight-icon">◈</div>
+                            <div>
+                                <strong>Performance Tuning</strong>
+                                <p>Data-driven optimization of robotics controllers using field logs and performance metrics</p>
+                            </div>
+                        </div>
+                        <div class="highlight-row">
+                            <div class="highlight-icon">◈</div>
+                            <div>
+                                <strong>Real-World Deployment</strong>
+                                <p>End-to-end ownership from architecture design to field testing and iteration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-terminal-wrap">
+                    <div class="profile-card">
+                        <div class="profile-avatar-wrap">
+                            <img
+                                src="https://avatars.githubusercontent.com/u/121827845?v=4"
+                                alt="Leonardo Bonacini"
+                                class="profile-avatar"
+                                loading="lazy"
+                            />
+                            <div class="profile-avatar-ring"></div>
+                        </div>
+                        <div class="profile-info">
+                            <span class="profile-name">Leonardo Bonacini</span>
+                            <span class="profile-handle">@leo-bonacini</span>
+                        </div>
+                        <div class="profile-links">
+                            <a href="https://github.com/leo-bonacini" class="profile-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/leonardo-bonacini/" class="profile-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="terminal">
+                        <div class="terminal-bar">
+                            <div class="terminal-dots">
+                                <span class="t-dot t-red"></span>
+                                <span class="t-dot t-yellow"></span>
+                                <span class="t-dot t-green"></span>
+                            </div>
+                            <span class="terminal-title">system_info.sh</span>
+                        </div>
+                        <div class="terminal-body" id="terminalBody">
+                            <div class="t-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">whoami</span>
+                            </div>
+                            <div class="t-out">leonardo_bonacini@earthsense</div>
+                            <div class="t-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">cat /etc/role</span>
+                            </div>
+                            <div class="t-out">Senior Robotics Engineer</div>
+                            <div class="t-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">cat /sys/specialization</span>
+                            </div>
+                            <div class="t-out t-list">
+                                <span>→ Autonomous Navigation</span>
+                                <span>→ State Estimation (EKF / ES-EKF)</span>
+                                <span>→ Sensor Fusion (GNSS / IMU / LiDAR)</span>
+                                <span>→ Motion Planning (MPC)</span>
+                                <span>→ Field Robotics &amp; Deployment</span>
+                            </div>
+                            <div class="t-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">uptime --human</span>
+                            </div>
+                            <div class="t-out">3+ years @ Earthsense · production systems</div>
+                            <div class="t-line t-active">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cursor">▋</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 02 — skills</span>
+                <h2 class="section-title">Technical Domain Map</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-domain reveal">
+                    <div class="skill-domain-top">
+                        <span class="domain-icon icon-cyan">⬡</span>
+                        <h3>Robotics &amp; Control</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="stag stag-accent">ROS2</span>
+                        <span class="stag">EKF / ES-EKF</span>
+                        <span class="stag">SLAM</span>
+                        <span class="stag">MPC</span>
+                        <span class="stag">Motion Planning</span>
+                        <span class="stag">Control Systems</span>
+                        <span class="stag">PID</span>
+                        <span class="stag">Path Following</span>
+                    </div>
+                </div>
+                <div class="skill-domain reveal">
+                    <div class="skill-domain-top">
+                        <span class="domain-icon icon-blue">◈</span>
+                        <h3>Perception &amp; Estimation</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="stag stag-accent">Sensor Fusion</span>
+                        <span class="stag">GNSS / IMU Integration</span>
+                        <span class="stag">LiDAR Processing</span>
+                        <span class="stag">Kalman Filtering</span>
+                        <span class="stag">Calibration</span>
+                        <span class="stag">Point Cloud Processing</span>
+                        <span class="stag">Localization</span>
+                    </div>
+                </div>
+                <div class="skill-domain reveal">
+                    <div class="skill-domain-top">
+                        <span class="domain-icon icon-green">◻</span>
+                        <h3>Software &amp; Systems</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="stag stag-accent">C++17</span>
+                        <span class="stag stag-accent">Python</span>
+                        <span class="stag">Linux</span>
+                        <span class="stag">Docker</span>
+                        <span class="stag">Real-time Systems</span>
+                        <span class="stag">CMake</span>
+                        <span class="stag">Git</span>
+                        <span class="stag">Eigen</span>
+                    </div>
+                </div>
+                <div class="skill-domain reveal">
+                    <div class="skill-domain-top">
+                        <span class="domain-icon icon-cyan">△</span>
+                        <h3>ML &amp; Data Science</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="stag stag-accent">PyTorch</span>
+                        <span class="stag">scikit-learn</span>
+                        <span class="stag">Data Pipelines</span>
+                        <span class="stag">Model Tuning</span>
+                        <span class="stag">YOLO</span>
+                        <span class="stag">Computer Vision</span>
+                        <span class="stag">NumPy / SciPy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 03 — projects</span>
+                <h2 class="section-title">Engineering Systems</h2>
+            </div>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Systems</button>
+                <button class="filter-btn" data-filter="estimation">Estimation</button>
+                <button class="filter-btn" data-filter="planning">Planning</button>
+                <button class="filter-btn" data-filter="ml">ML</button>
+                <button class="filter-btn" data-filter="field">Field Robotics</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- SYS-001 -->
+                <div class="project-card reveal" data-tags="estimation">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-001</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Production</span>
+                    </div>
+                    <h3 class="project-title">ES-EKF State Estimation Framework</h3>
+                    <p class="project-sub">Production-grade sensor fusion system for autonomous navigation</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">GNSS</div>
+                            <div class="arch-node node-in">IMU</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">ES-EKF Core</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">State Vector</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Centimeter-accurate localization in GNSS-degraded outdoor environments while maintaining real-time performance for autonomous navigation.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Methods</span>
+                            <div class="method-tags">
+                                <span class="mtag">Error-State EKF</span>
+                                <span class="mtag">IMU Pre-integration</span>
+                                <span class="mtag">GNSS Fusion</span>
+                                <span class="mtag">Chi² Outlier Rejection</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">C++17</span>
+                                <span class="mtag mtag-code">ROS2</span>
+                                <span class="mtag mtag-code">Eigen</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Sub-10cm positioning accuracy · 200Hz estimation loop
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="plink"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="#" class="plink plink-primary">Technical Deep Dive →</a>
+                    </div>
+                </div>
+
+                <!-- SYS-002 -->
+                <div class="project-card reveal" data-tags="planning field">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-002</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Production</span>
+                    </div>
+                    <h3 class="project-title">Autonomous Navigation Stack</h3>
+                    <p class="project-sub">Full navigation pipeline for field robotics deployments</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Perception</div>
+                            <div class="arch-node node-in">Map</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">MPC Planner</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Motor Control</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Navigating agricultural environments autonomously with dynamic obstacles, irregular terrain, and unreliable GPS coverage.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Methods</span>
+                            <div class="method-tags">
+                                <span class="mtag">MPC</span>
+                                <span class="mtag">Costmap Planning</span>
+                                <span class="mtag">Obstacle Avoidance</span>
+                                <span class="mtag">Path Smoothing</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">ROS2</span>
+                                <span class="mtag mtag-code">C++</span>
+                                <span class="mtag mtag-code">Nav2</span>
+                                <span class="mtag mtag-code">Python</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            40% reduction in path tracking error · Deployed across robot fleet
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="plink"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="#" class="plink plink-primary">Technical Deep Dive →</a>
+                    </div>
+                </div>
+
+                <!-- SYS-003 -->
+                <div class="project-card reveal" data-tags="estimation field">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-003</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Production</span>
+                    </div>
+                    <h3 class="project-title">GNSS/IMU Robust Fusion System</h3>
+                    <p class="project-sub">Fault-tolerant localization under sensor degradation</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in node-warn">GNSS ⚠</div>
+                            <div class="arch-node node-in">IMU</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Health Monitor + Fusion</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Robust Pose</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Maintaining reliable localization when GNSS signals are degraded, denied, or multipath-corrupted in agricultural field environments.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Methods</span>
+                            <div class="method-tags">
+                                <span class="mtag">GNSS Health Monitoring</span>
+                                <span class="mtag">IMU Dead Reckoning</span>
+                                <span class="mtag">Chi² Outlier Rejection</span>
+                                <span class="mtag">Adaptive Noise</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">C++</span>
+                                <span class="mtag mtag-code">ROS2</span>
+                                <span class="mtag mtag-code">Eigen</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            60s+ reliable dead-reckoning under full GNSS denial
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="plink"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="#" class="plink plink-primary">Technical Deep Dive →</a>
+                    </div>
+                </div>
+
+                <!-- SYS-004 -->
+                <div class="project-card reveal" data-tags="ml estimation">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-004</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-blue"></span>Internal Tool</span>
+                    </div>
+                    <h3 class="project-title">Data-Driven Controller Tuning Pipeline</h3>
+                    <p class="project-sub">Automated optimization of robotic controllers via field logs</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Field Logs</div>
+                            <div class="arch-node node-in">Metrics</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Bayesian Optimizer</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Optimal Params</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Manual controller tuning is time-consuming, inconsistent across units, and fails to generalize across varying terrain conditions at scale.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Methods</span>
+                            <div class="method-tags">
+                                <span class="mtag">Bayesian Optimization</span>
+                                <span class="mtag">Offline RL</span>
+                                <span class="mtag">Log Replay</span>
+                                <span class="mtag">Metric Scoring</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">Python</span>
+                                <span class="mtag mtag-code">Optuna</span>
+                                <span class="mtag mtag-code">scikit-learn</span>
+                                <span class="mtag mtag-code">pandas</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            3× faster tuning cycles · 25% tracking improvement fleet-wide
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="plink"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="#" class="plink plink-primary">Technical Deep Dive →</a>
+                    </div>
+                </div>
+
+                <!-- SYS-005 -->
+                <div class="project-card reveal" data-tags="ml field">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-005</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Production</span>
+                    </div>
+                    <h3 class="project-title">Vision-Based Obstacle Detection</h3>
+                    <p class="project-sub">Real-time detection system for agricultural field navigation</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">RGB-D Camera</div>
+                            <div class="arch-node node-in">Depth</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">YOLOv8 + Projection</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Costmap Layer</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Detecting unstructured obstacles (equipment, animals, debris) in varying lighting conditions across agricultural environments in real-time.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Methods</span>
+                            <div class="method-tags">
+                                <span class="mtag">YOLOv8</span>
+                                <span class="mtag">Depth Projection</span>
+                                <span class="mtag">Costmap Integration</span>
+                                <span class="mtag">Transfer Learning</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">Python</span>
+                                <span class="mtag mtag-code">PyTorch</span>
+                                <span class="mtag mtag-code">ROS2</span>
+                                <span class="mtag mtag-code">OpenCV</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            92% detection accuracy · 30fps real-time on edge hardware
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="plink"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="#" class="plink plink-primary">Technical Deep Dive →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 04 — experience</span>
+                <h2 class="section-title">Deployment History</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line-v"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-top">
+                            <div>
+                                <h3 class="timeline-role">Senior Robotics Engineer</h3>
+                                <div class="timeline-company">
+                                    <span class="company-dot"></span>
+                                    Earthsense
+                                </div>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2023 — Present</span>
+                                <span class="timeline-badge">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Leading development of autonomous navigation and state estimation systems for agricultural field robotics. End-to-end ownership of perception-to-control pipeline for production-deployed robot platforms in real-world field environments.</p>
+                            <div class="achievements">
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Architected and deployed ES-EKF state estimation system used in production across the full robot fleet
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Led development of robust GNSS/IMU fusion system maintaining localization under complete signal denial
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Designed and implemented the full autonomous navigation stack (ROS2 + MPC + perception layers)
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Built data-driven tuning pipeline reducing controller optimization cycles by 3×
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Conducted and led field testing and iterative deployment in agricultural environments
+                                </div>
+                            </div>
+                            <div class="timeline-tech-tags">
+                                <span class="tt">ROS2</span>
+                                <span class="tt">C++</span>
+                                <span class="tt">EKF / ES-EKF</span>
+                                <span class="tt">MPC</span>
+                                <span class="tt">GNSS/IMU</span>
+                                <span class="tt">Python</span>
+                                <span class="tt">PyTorch</span>
+                                <span class="tt">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section" id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 05 — research</span>
+                <h2 class="section-title">Technical Notes</h2>
+                <p class="section-sub">Engineering insights from real-world robotics development</p>
+            </div>
+            <div class="research-grid">
+                <article class="research-card reveal">
+                    <div class="research-top">
+                        <span class="research-tag">Estimation</span>
+                        <span class="research-type">Field Notes</span>
+                    </div>
+                    <h3>EKF vs ES-EKF: Production Lessons</h3>
+                    <p>Why Error-State formulations outperform standard EKF for robotics state estimation, and the practical implications for sensor fusion in production systems.</p>
+                    <a href="#" class="research-link">Read Note →</a>
+                </article>
+                <article class="research-card reveal">
+                    <div class="research-top">
+                        <span class="research-tag">Sensor Fusion</span>
+                        <span class="research-type">Experiments</span>
+                    </div>
+                    <h3>GNSS Multipath in Agricultural Environments</h3>
+                    <p>Analysis of GNSS signal degradation patterns in field conditions and robust fusion strategies that maintain localization under degraded signals.</p>
+                    <a href="#" class="research-link">Read Note →</a>
+                </article>
+                <article class="research-card reveal">
+                    <div class="research-top">
+                        <span class="research-tag">Control</span>
+                        <span class="research-type">Optimization</span>
+                    </div>
+                    <h3>MPC Horizon Tuning for Field Robotics</h3>
+                    <p>Practical guide to tuning MPC prediction horizons and cost weights for robots operating in unstructured outdoor environments with variable terrain.</p>
+                    <a href="#" class="research-link">Read Note →</a>
+                </article>
+                <article class="research-card reveal">
+                    <div class="research-top">
+                        <span class="research-tag">Debugging</span>
+                        <span class="research-type">System Ops</span>
+                    </div>
+                    <h3>Diagnosing EKF Divergence in the Field</h3>
+                    <p>Systematic approach to diagnosing and recovering from filter divergence in production systems, including sensor health monitoring strategies.</p>
+                    <a href="#" class="research-link">Read Note →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 06 — contact</span>
+                <h2 class="section-title">Establish Connection</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <p class="contact-intro">Open to discussing robotics challenges, autonomous systems research, consulting opportunities, and collaboration on interesting problems in field robotics.</p>
+                    <div class="contact-links">
+                        <a href="mailto:leobonacini@gmail.com" class="contact-link">
+                            <div class="contact-link-icon">@</div>
+                            <div class="contact-link-body">
+                                <span class="contact-link-label">Email</span>
+                                <span class="contact-link-val">leobonacini@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/leonardo-bonacini/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-link-icon">in</div>
+                            <div class="contact-link-body">
+                                <span class="contact-link-label">LinkedIn</span>
+                                <span class="contact-link-val">linkedin.com/in/leonardo-bonacini</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/leo-bonacini" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </div>
+                            <div class="contact-link-body">
+                                <span class="contact-link-label">GitHub</span>
+                                <span class="contact-link-val">github.com/leo-bonacini</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <div class="status-panel">
+                        <div class="status-panel-title">// system_status</div>
+                        <div class="status-row">
+                            <span class="pulse-dot pulse-green"></span>
+                            <span>Available for consulting</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="pulse-dot pulse-green"></span>
+                            <span>Open to collaboration</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="pulse-dot pulse-blue"></span>
+                            <span>Response time: ~24h</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="pulse-dot pulse-green"></span>
+                            <span>Located: USA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="nav-logo-bracket">[</span>
+                    <span>LB</span>
+                    <span class="nav-logo-bracket">]</span>
+                </div>
+                <div class="footer-center">
+                    <p>Leonardo Bonacini — Senior Robotics Engineer</p>
+                    <p class="footer-sub">Built with precision. Deployed in the field.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/leo-bonacini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
