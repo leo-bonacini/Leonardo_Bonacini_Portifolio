@@ -304,6 +304,7 @@
                 <button class="filter-btn" data-filter="robotics">Robotics</button>
                 <button class="filter-btn" data-filter="data-science">Data Science</button>
                 <button class="filter-btn" data-filter="web">Web Tools</button>
+                <button class="filter-btn" data-filter="games">Games</button>
             </div>
             <div class="projects-grid" id="projectsGrid">
 
@@ -1194,6 +1195,120 @@
                     <div class="project-card-footer">
                         <a href="https://github.com/leo-bonacini/robot_toolbox" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
                         <a href="https://leo-bonacini.github.io/robot_toolbox/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- SYS-017 -->
+                <div class="project-card reveal" data-tags="web games">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-017</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
+                    </div>
+                    <h3 class="project-title">Tic-Tac-Toe vs Bot</h3>
+                    <p class="project-sub">Single-file browser game against a rule based bot with three difficulty levels: no build step, no dependencies, no installation</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Difficulty</div>
+                            <div class="arch-node node-in">First Move</div>
+                            <div class="arch-node node-in">Player Input</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Bot Strategy Engine (random · win/block heuristics · minimax)</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Board Update · Winning Line Highlight · Round Summary</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Play Tic-Tac-Toe against a computer opponent entirely in the browser, in one HTML file with zero dependencies. The difficulty setting swaps the bot strategy: random moves (easy), win/block heuristics (medium), or full minimax search (hard), which plays perfectly and can never be beaten.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Features</span>
+                            <div class="method-tags">
+                                <span class="mtag">3 Difficulty Levels</span>
+                                <span class="mtag">Minimax Perfect Play</span>
+                                <span class="mtag">Win/Block Heuristics</span>
+                                <span class="mtag">Setup Screen (difficulty · first move)</span>
+                                <span class="mtag">Winning Line Highlight</span>
+                                <span class="mtag">Keyboard Playable</span>
+                                <span class="mtag">Screen Reader Announcements</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">HTML</span>
+                                <span class="mtag mtag-code">CSS</span>
+                                <span class="mtag mtag-code">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Single HTML file · unbeatable hard mode (minimax) · fully keyboard accessible · works offline
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/leo-bonacini/tic-tac-toe" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/tic-tac-toe/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- SYS-018 -->
+                <div class="project-card reveal" data-tags="web games">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-018</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
+                    </div>
+                    <h3 class="project-title">Battleship vs Bot</h3>
+                    <p class="project-sub">Complete Battleship game in a single HTML file with whole-ship SVG artwork and a bot with three difficulty levels: no libraries, no build step, no installation</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Fleet Placement</div>
+                            <div class="arch-node node-in">Difficulty</div>
+                            <div class="arch-node node-in">Player Shots</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Bot Targeting Engine (random · neighbor hunt · full hunt and target)</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Board State · Fleet Panels · Wreck Reveal · Turn Status</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Play full Battleship against a computer opponent entirely in the browser, in one HTML file with zero libraries. The hard bot runs a complete hunt and target strategy: it detects a ship's direction after a second hit, extends along the line, reverses when it runs off the end, and never abandons a wounded ship.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Features</span>
+                            <div class="method-tags">
+                                <span class="mtag">3 Bot Difficulties</span>
+                                <span class="mtag">Hunt and Target AI</span>
+                                <span class="mtag">Manual + Auto Fleet Placement</span>
+                                <span class="mtag">Live Placement Preview</span>
+                                <span class="mtag">Whole-ship SVG Artwork</span>
+                                <span class="mtag">Wreck Reveal on Sink</span>
+                                <span class="mtag">Keyboard Play (R to rotate)</span>
+                                <span class="mtag">Touch Support</span>
+                                <span class="mtag">Screen Reader Announcements</span>
+                                <span class="mtag">Responsive Board</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">HTML</span>
+                                <span class="mtag mtag-code">CSS</span>
+                                <span class="mtag mtag-code">JavaScript</span>
+                                <span class="mtag mtag-code">SVG</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Single HTML file · zero libraries · plays by mouse, keyboard, or touch · works offline
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/leo-bonacini/battleship" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/battleship/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
                     </div>
                 </div>
 
