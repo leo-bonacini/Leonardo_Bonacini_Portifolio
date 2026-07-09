@@ -1372,6 +1372,67 @@
                     </div>
                 </div>
 
+                <!-- SYS-020 -->
+                <div class="project-card reveal" data-tags="web games">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-020</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
+                    </div>
+                    <h3 class="project-title">Sudoku</h3>
+                    <p class="project-sub">Modern, dependency-free Sudoku with pencil-mark notes, a daily challenge, and full stats tracking: no frameworks, no build step</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Difficulty Level</div>
+                            <div class="arch-node node-in">Daily Seed</div>
+                            <div class="arch-node node-in">Player Input</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Generator & Solver (backtracking · unique-solution check · hint engine)</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Grid Render · Notes & Undo/Redo · Stats Tracking</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Play classic Sudoku entirely in the browser, in plain HTML5/CSS3/ES6 with zero frameworks and no build step. A backtracking solver with candidate-based pruning powers board generation (with a guaranteed unique solution), solvability checks, and a limited hint system.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Features</span>
+                            <div class="method-tags">
+                                <span class="mtag">4 Difficulty Levels (Unique Solution)</span>
+                                <span class="mtag">Backtracking Solver & Generator</span>
+                                <span class="mtag">Pencil-mark Notes (auto-cleanup)</span>
+                                <span class="mtag">Full Undo/Redo History</span>
+                                <span class="mtag">Limited Hints (3 per game)</span>
+                                <span class="mtag">Conflict & Mistake Highlighting</span>
+                                <span class="mtag">Timer with Per-difficulty Best Times</span>
+                                <span class="mtag">Auto-save to localStorage</span>
+                                <span class="mtag">Daily Challenge (seeded)</span>
+                                <span class="mtag">Export/Import via 81-char Code</span>
+                                <span class="mtag">Dark, Light & High-contrast Themes</span>
+                                <span class="mtag">Full Keyboard Play</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">HTML</span>
+                                <span class="mtag mtag-code">CSS</span>
+                                <span class="mtag mtag-code">JavaScript (ES6+)</span>
+                                <span class="mtag mtag-code">Web Audio API</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Zero dependencies · guaranteed unique-solution boards · daily challenge · works offline
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/leo-bonacini/sudoku" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/sudoku/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
