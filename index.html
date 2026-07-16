@@ -1490,6 +1490,64 @@
                     </div>
                 </div>
 
+                <!-- SYS-022 -->
+                <div class="project-card reveal" data-tags="web games">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-022</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
+                    </div>
+                    <h3 class="project-title">Ludo</h3>
+                    <p class="project-sub">Single-file, browser-based Ludo against three bots, with token animations, keyboard controls, and full undo support: no frameworks, no build step</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Color Choice</div>
+                            <div class="arch-node node-in">Dice Roll</div>
+                            <div class="arch-node node-in">Token Select</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Turn Engine (capture · block · safe cell · three-6 forfeit)</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Board Render · Bot AI · Turn Log & Stats</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Play classic 4-player Ludo entirely in the browser against computer-controlled opponents, in plain HTML5/CSS3/ES6 with zero frameworks and no build step. The engine handles token capture, safe cells, two-token blocks, and the three-6 forfeit rule, with full undo and a live turn log.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Features</span>
+                            <div class="method-tags">
+                                <span class="mtag">4-Player Board (Red · Green · Yellow · Blue)</span>
+                                <span class="mtag">Play vs 3 Bots</span>
+                                <span class="mtag">Smooth Token Animations</span>
+                                <span class="mtag">Keyboard Controls (Space · Arrows · Enter)</span>
+                                <span class="mtag">Capture, Block & Safe Cell Rules</span>
+                                <span class="mtag">Three-6 Forfeit</span>
+                                <span class="mtag">Undo Support</span>
+                                <span class="mtag">Dice History & Turn Log</span>
+                                <span class="mtag">Light/Dark Theme</span>
+                                <span class="mtag">Sound Effects</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">HTML</span>
+                                <span class="mtag mtag-code">CSS</span>
+                                <span class="mtag mtag-code">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Zero dependencies · full keyboard support · undo & turn log · works offline
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/leo-bonacini/ludo" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/ludo/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
