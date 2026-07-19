@@ -263,3 +263,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         window.scrollTo({ top, behavior: 'smooth' });
     });
 });
+
+/* =============================================
+   VISITOR COUNTER
+   ============================================= */
+(function initVisitCounter() {
+    const el = document.getElementById('visitCount');
+    if (!el) return;
+    fetch('https://abacus.jasoncameron.dev/hit/leobonacini-portfolio/visits')
+        .then(res => res.json())
+        .then(data => { el.textContent = data.value; })
+        .catch(() => { el.textContent = 'n/a'; });
+})();
