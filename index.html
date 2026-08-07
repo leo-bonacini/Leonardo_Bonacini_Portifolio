@@ -1664,6 +1664,63 @@
                     </div>
                 </div>
 
+                <!-- SYS-025 -->
+                <div class="project-card reveal" data-tags="web">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-025</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
+                    </div>
+                    <h3 class="project-title">GeoSketch</h3>
+                    <p class="project-sub">Single file, browser only tool for digitizing shapes on satellite imagery and attaching custom attributes to each one</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Satellite Basemap</div>
+                            <div class="arch-node node-in">Drawing Tools</div>
+                            <div class="arch-node node-in">Feature Sidebar</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Attribute Editor & Live Measurements (area · length · radius)</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">Place Search · GeoJSON Import/Export</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Digitizing regions on a map and tagging them with custom metadata usually means a GIS install or a hosted service. GeoSketch is a single HTML file that runs entirely in the browser: draw polygons, freehand lines, rectangles, circles, and markers over a satellite basemap, attach arbitrary key/value attributes to each shape, and export the result as GeoJSON.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Features</span>
+                            <div class="method-tags">
+                                <span class="mtag">Satellite Basemap (Esri World Imagery)</span>
+                                <span class="mtag">Polygon, Freehand, Rectangle, Circle & Marker Tools</span>
+                                <span class="mtag">Custom Attribute Editor per Feature</span>
+                                <span class="mtag">Live Area, Length & Radius Measurements</span>
+                                <span class="mtag">Place Search (Nominatim) & Coordinate Input</span>
+                                <span class="mtag">GeoJSON Import/Export</span>
+                                <span class="mtag">Color Coded Feature Sidebar</span>
+                                <span class="mtag">Optional Place Labels & OSM Layer</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">HTML</span>
+                                <span class="mtag mtag-code">CSS</span>
+                                <span class="mtag mtag-code">JavaScript</span>
+                                <span class="mtag mtag-code">Leaflet</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Zero dependencies beyond Leaflet · works fully offline once loaded · exports GeoJSON for use in any GIS pipeline
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/leo-bonacini/GeoSketch" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/GeoSketch/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
