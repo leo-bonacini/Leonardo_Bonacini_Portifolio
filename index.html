@@ -1721,6 +1721,121 @@
                     </div>
                 </div>
 
+                <!-- SYS-026 -->
+                <div class="project-card reveal" data-tags="web">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-026</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
+                    </div>
+                    <h3 class="project-title">LabelSketch</h3>
+                    <p class="project-sub">Single file, browser only image annotation tool for building bounding box and polygon datasets for ML training</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Drag & Drop Images</div>
+                            <div class="arch-node node-in">Class Manager</div>
+                            <div class="arch-node node-in">Canvas Editor</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Bounding Box & Polygon Annotation (move · resize · reshape)</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">JSON Export · Structured ZIP Dataset</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Labeling images for a detection or segmentation model usually means installing a desktop app or paying for a hosted annotation service. LabelSketch is a single HTML file that runs entirely in the browser: drag in images, draw bounding boxes or polygons, tag classification labels, and export a structured dataset with zero network calls.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Features</span>
+                            <div class="method-tags">
+                                <span class="mtag">Drag & Drop Image Import</span>
+                                <span class="mtag">Bounding Box & Polygon Annotation</span>
+                                <span class="mtag">Image Level Classification Tags</span>
+                                <span class="mtag">Class Manager with Auto Color Assignment</span>
+                                <span class="mtag">Interactive Move, Resize & Reshape</span>
+                                <span class="mtag">Multi Level Zoom & Pan</span>
+                                <span class="mtag">JSON Import/Export</span>
+                                <span class="mtag">Structured ZIP Dataset Export (Content Hashed)</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">HTML</span>
+                                <span class="mtag mtag-code">CSS</span>
+                                <span class="mtag mtag-code">JavaScript</span>
+                                <span class="mtag mtag-code">HTML5 Canvas</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Zero dependencies, zero network calls · exports pixel and normalized coordinates compatible with COCO/YOLO pipelines
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/leo-bonacini/LabelSketch" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/LabelSketch/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- SYS-027 -->
+                <div class="project-card reveal" data-tags="web">
+                    <div class="project-card-top">
+                        <span class="sys-id">SYS-027</span>
+                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
+                    </div>
+                    <h3 class="project-title">AudioSketch</h3>
+                    <p class="project-sub">Single file, browser only audio annotation tool for labeling sound events and segments for ML training</p>
+                    <div class="arch-diagram">
+                        <div class="arch-row">
+                            <div class="arch-node node-in">Drag & Drop Audio Clips</div>
+                            <div class="arch-node node-in">Class Manager</div>
+                            <div class="arch-node node-in">Waveform Canvas</div>
+                        </div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-proc">Region & Marker Annotation (move · trim · relabel)</div>
+                        <div class="arch-arrow-down">↓</div>
+                        <div class="arch-node node-out">JSON Export · Structured ZIP Dataset</div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <span class="detail-label">Problem</span>
+                            <p>Labeling audio clips for a sound event or classification model usually means a desktop DAW or a hosted annotation service. AudioSketch is a single HTML file that runs entirely in the browser: drag in audio clips, mark time range regions or single timestamp markers, tag classes, and export a structured dataset with zero network calls.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Features</span>
+                            <div class="method-tags">
+                                <span class="mtag">Drag & Drop Multi Clip Import</span>
+                                <span class="mtag">Region (Time Range) & Marker Annotation</span>
+                                <span class="mtag">Class Manager with Auto Color Assignment</span>
+                                <span class="mtag">Playback with Loop & Preview</span>
+                                <span class="mtag">Move, Trim & Relabel Annotations</span>
+                                <span class="mtag">Waveform Zoom & Pan</span>
+                                <span class="mtag">JSON Import/Export</span>
+                                <span class="mtag">Structured ZIP Dataset Export (Content Hashed)</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="method-tags">
+                                <span class="mtag mtag-code">HTML</span>
+                                <span class="mtag mtag-code">CSS</span>
+                                <span class="mtag mtag-code">JavaScript</span>
+                                <span class="mtag mtag-code">Web Audio API</span>
+                                <span class="mtag mtag-code">HTML5 Canvas</span>
+                            </div>
+                        </div>
+                        <div class="project-result">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Zero dependencies, zero network calls · exports time aligned annotations in seconds and normalized 0-1 positions
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/leo-bonacini/AudioSketch" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/AudioSketch/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
