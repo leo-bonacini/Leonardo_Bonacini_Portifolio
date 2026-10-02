@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Bonacini | Senior Robotics Engineer</title>
-    <meta name="description" content="Senior Robotics Engineer specializing in autonomous systems, state estimation, and sensor fusion at Earthsense.">
+    <title>Leonardo Bonacini | Robotics Engineer</title>
+    <meta name="description" content="Robotics Engineer specializing in autonomous navigation, perception, state estimation, and sensor fusion for field robots.">
     <meta name="keywords" content="robotics engineer, autonomous systems, state estimation, sensor fusion, ROS2, EKF, SLAM, MPC">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,25 +43,26 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="pulse-dot"></span>
-                <span>PhD · Mechanical Engineering · University of São Paulo</span>
+                <span>PhD · Mechanical Engineering · University of São Paulo · Based in Brazil</span>
             </div>
             <h1 class="hero-name">Leonardo Bonacini</h1>
             <h2 class="hero-title">
-                Senior Robotics Engineer
+                Robotics Engineer
                 <span class="hero-sep">|</span>
                 Autonomous Systems
                 <span class="hero-sep">|</span>
-                <span class="hero-company">Earthsense</span>
-                <span class="hero-year">&nbsp;2023–Present</span>
+                <span class="hero-company">Postdoc @ USP</span>
+                <span class="hero-year">&nbsp;2026–Present</span>
             </h2>
             <p class="hero-tagline">
-                Building and deploying autonomous systems in real-world environments.<br>
-                Expert in <span class="accent">state estimation</span>, <span class="accent">sensor fusion</span>, and <span class="accent">field robotics</span>.
+                I build navigation software for robots that work outdoors.<br>
+                <span class="accent">Perception</span>, <span class="accent">sensor fusion</span>, <span class="accent">state estimation</span> and <span class="accent">control</span>, tested in the field.<br>
+                Lately I've also been working with LLMs.
             </p>
             <div class="hero-metrics">
                 <div class="hero-metric">
-                    <span class="hero-metric-val">3+</span>
-                    <span class="hero-metric-label">Years at Earthsense</span>
+                    <span class="hero-metric-val">4+</span>
+                    <span class="hero-metric-label">Years in Field Robotics</span>
                 </div>
                 <div class="hero-metric-sep"></div>
                 <div class="hero-metric">
@@ -103,19 +104,19 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// 01 — about</span>
+                <span class="section-tag">// 01 · about</span>
                 <h2 class="section-title">System Overview</h2>
             </div>
             <div class="about-grid">
                 <div class="about-text">
                     <p class="about-intro">
-                        Senior Robotics Engineer at Earthsense with a focus on building reliable, production-grade autonomous systems that operate in real-world, unstructured environments.
+                        I'm a robotics engineer and a postdoc at the University of São Paulo. Before that I spent three years at Earthsense as a Senior Robotics Engineer, working on the autonomy software of agricultural robots used by customers in Brazil and the US.
                     </p>
                     <p>
-                        My work spans the full autonomous navigation stack, from low-level sensor fusion and state estimation to high-level planning and control. I develop systems that must be robust to real-world constraints: sensor noise, GPS degradation, dynamic obstacles, and unpredictable terrain.
+                        I've worked on most parts of the navigation stack: obstacle detection and traversable-area segmentation with YOLO on a Jetson, fusing LiDAR, IMU, GNSS/RTK and stereo cameras, localization, mapping, path planning and control. Most of it runs on robots driving between crop rows, where GPS drops out under the canopy and the ground is never flat.
                     </p>
                     <p>
-                        I specialize in bridging the gap between academic algorithms and production robotics, taking techniques like EKF, ES-EKF, and MPC from theory to deployed systems running in agricultural fields and complex outdoor environments.
+                        A lot of my work is taking methods like EKF, ES-EKF and MPC out of papers and getting them to run on a real robot. In the postdoc I work on robot navigation for oil and gas companies, and I recently started a project using LLM agents to help detect bearing faults. That last part is new to me and I'm still learning it.
                     </p>
                     <div class="about-highlights">
                         <div class="highlight-row">
@@ -185,28 +186,39 @@
                                 <span class="t-prompt">$</span>
                                 <span class="t-cmd">whoami</span>
                             </div>
-                            <div class="t-out">leonardo_bonacini@earthsense</div>
+                            <div class="t-out">leonardo_bonacini@usp</div>
+                            <div class="t-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">cat /etc/location</span>
+                            </div>
+                            <div class="t-out">São Carlos, SP, Brazil (UTC-3)</div>
                             <div class="t-line">
                                 <span class="t-prompt">$</span>
                                 <span class="t-cmd">cat /etc/role</span>
                             </div>
-                            <div class="t-out">Senior Robotics Engineer</div>
+                            <div class="t-out">Robotics Engineer · Postdoctoral Researcher</div>
                             <div class="t-line">
                                 <span class="t-prompt">$</span>
                                 <span class="t-cmd">cat /sys/specialization</span>
                             </div>
                             <div class="t-out t-list">
                                 <span>→ Autonomous Navigation</span>
+                                <span>→ Perception (YOLO / TensorRT / Jetson)</span>
                                 <span>→ State Estimation (EKF / ES-EKF)</span>
-                                <span>→ Sensor Fusion (GNSS / IMU / LiDAR)</span>
-                                <span>→ Motion Planning (MPC)</span>
+                                <span>→ Sensor Fusion (GNSS-RTK / IMU / LiDAR / Stereo)</span>
+                                <span>→ Planning &amp; Control (MPC / MPPI)</span>
                                 <span>→ Field Robotics &amp; Deployment</span>
                             </div>
                             <div class="t-line">
                                 <span class="t-prompt">$</span>
                                 <span class="t-cmd">uptime --human</span>
                             </div>
-                            <div class="t-out">3+ years @ Earthsense · production systems</div>
+                            <div class="t-out">4+ years in field robotics · production systems</div>
+                            <div class="t-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd">cat /now</span>
+                            </div>
+                            <div class="t-out">→ Learning LLM agents (bearing fault detection)</div>
                             <div class="t-line t-active">
                                 <span class="t-prompt">$</span>
                                 <span class="t-cursor">▋</span>
@@ -222,7 +234,7 @@
     <section class="section section-alt" id="skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// 02 — skills</span>
+                <span class="section-tag">// 02 · skills</span>
                 <h2 class="section-title">Technical Domain Map</h2>
             </div>
             <div class="skills-grid">
@@ -236,10 +248,14 @@
                         <span class="stag">EKF / ES-EKF</span>
                         <span class="stag">SLAM</span>
                         <span class="stag">MPC</span>
+                        <span class="stag">MPPI</span>
                         <span class="stag">Motion Planning</span>
                         <span class="stag">Control Systems</span>
                         <span class="stag">PID</span>
                         <span class="stag">Path Following</span>
+                        <span class="stag">Behavior Trees</span>
+                        <span class="stag">Gazebo / RViz</span>
+                        <span class="stag">HIL Testing</span>
                     </div>
                 </div>
                 <div class="skill-domain reveal">
@@ -249,7 +265,8 @@
                     </div>
                     <div class="skill-tags">
                         <span class="stag stag-accent">Sensor Fusion</span>
-                        <span class="stag">GNSS / IMU Integration</span>
+                        <span class="stag">GNSS-RTK / IMU Integration</span>
+                        <span class="stag">Stereo Vision</span>
                         <span class="stag">LiDAR Processing</span>
                         <span class="stag">Kalman Filtering</span>
                         <span class="stag">Calibration</span>
@@ -271,12 +288,15 @@
                         <span class="stag">CMake</span>
                         <span class="stag">Git</span>
                         <span class="stag">Eigen</span>
+                        <span class="stag">NVIDIA Jetson</span>
+                        <span class="stag">CUDA</span>
+                        <span class="stag">GitHub Actions</span>
                     </div>
                 </div>
                 <div class="skill-domain reveal">
                     <div class="skill-domain-top">
                         <span class="domain-icon icon-cyan">△</span>
-                        <h3>ML &amp; Data Science</h3>
+                        <h3>AI, ML &amp; Data Science</h3>
                     </div>
                     <div class="skill-tags">
                         <span class="stag stag-accent">PyTorch</span>
@@ -284,6 +304,9 @@
                         <span class="stag">Data Pipelines</span>
                         <span class="stag">Model Tuning</span>
                         <span class="stag">YOLO</span>
+                        <span class="stag">TensorRT</span>
+                        <span class="stag">OpenCV</span>
+                        <span class="stag">LLMs / Agentic Systems</span>
                         <span class="stag">Computer Vision</span>
                         <span class="stag">NumPy / SciPy</span>
                     </div>
@@ -296,7 +319,7 @@
     <section class="section" id="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// 03 — projects</span>
+                <span class="section-tag">// 03 · projects</span>
                 <h2 class="section-title">Engineering Systems</h2>
             </div>
             <div class="filter-bar">
@@ -701,7 +724,7 @@
                     <div class="project-details">
                         <div class="detail-block">
                             <span class="detail-label">Problem</span>
-                            <p>Classify 8 CNC turning conditions — combinations of feed rate, depth of cut, and workpiece material — from time-domain and frequency-domain signal features, with model selection via backward stepwise elimination and LRT validation.</p>
+                            <p>Classify 8 CNC turning conditions (combinations of feed rate, depth of cut, and workpiece material) from time-domain and frequency-domain signal features, with model selection via backward stepwise elimination and LRT validation.</p>
                         </div>
                         <div class="detail-block">
                             <span class="detail-label">Methods</span>
@@ -741,7 +764,7 @@
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">Invoice Generator</h3>
-                    <p class="project-sub">Zero-dependency, single-file browser invoice tool — no server, no build step, no installation</p>
+                    <p class="project-sub">Zero-dependency, single-file browser invoice tool: no server, no build step, no installation</p>
                     <div class="arch-diagram">
                         <div class="arch-row">
                             <div class="arch-node node-in">Company Info</div>
@@ -1845,10 +1868,53 @@
     <section class="section section-alt" id="experience">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// 04 — experience</span>
+                <span class="section-tag">// 04 · experience</span>
                 <h2 class="section-title">Deployment History</h2>
             </div>
             <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line-v"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-top">
+                            <div>
+                                <h3 class="timeline-role">Postdoctoral Researcher</h3>
+                                <div class="timeline-company">
+                                    <span class="company-dot"></span>
+                                    University of São Paulo (USP)
+                                </div>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2026–Present</span>
+                                <span class="timeline-badge">Research</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Robot navigation research for companies in the oil and gas sector.</p>
+                            <div class="achievements">
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Perception, localization and trajectory planning for robots in industrial sites
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Started a project on using LLM agents for bearing fault detection
+                                </div>
+                            </div>
+                            <div class="timeline-tech-tags">
+                                <span class="tt">ROS2</span>
+                                <span class="tt">C++</span>
+                                <span class="tt">Python</span>
+                                <span class="tt">Perception</span>
+                                <span class="tt">Localization</span>
+                                <span class="tt">LLMs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="timeline-item reveal">
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
@@ -1864,12 +1930,12 @@
                                 </div>
                             </div>
                             <div class="timeline-meta">
-                                <span class="timeline-date">2023 — Present</span>
+                                <span class="timeline-date">2023–2026</span>
                                 <span class="timeline-badge">Full-time</span>
                             </div>
                         </div>
                         <div class="timeline-body">
-                            <p>Leading development of autonomous navigation and state estimation systems for agricultural field robotics. End-to-end ownership of perception-to-control pipeline for production-deployed robot platforms in real-world field environments.</p>
+                            <p>Worked on the autonomy software of agricultural robots used commercially in Brazil and the US, from perception down to control: sensor fusion (LiDAR, IMU, GNSS/RTK, stereo), localization, mapping, planning and real-time control on NVIDIA Jetson.</p>
                             <div class="achievements">
                                 <div class="achievement">
                                     <span class="ach-arrow">→</span>
@@ -1882,6 +1948,14 @@
                                 <div class="achievement">
                                     <span class="ach-arrow">→</span>
                                     Designed and implemented the full autonomous navigation stack (ROS2 + MPC + perception layers)
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Built YOLO models for obstacle detection and traversable-area segmentation, running on Jetson with TensorRT
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Worked with teams in the US and India; used LLMs to organize project docs and onboarding material
                                 </div>
                                 <div class="achievement">
                                     <span class="ach-arrow">→</span>
@@ -1900,7 +1974,52 @@
                                 <span class="tt">GNSS/IMU</span>
                                 <span class="tt">Python</span>
                                 <span class="tt">PyTorch</span>
+                                <span class="tt">YOLO / TensorRT</span>
+                                <span class="tt">NVIDIA Jetson</span>
                                 <span class="tt">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line-v"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-top">
+                            <div>
+                                <h3 class="timeline-role">Agricultural Robotics Researcher</h3>
+                                <div class="timeline-company">
+                                    <span class="company-dot"></span>
+                                    São Carlos School of Engineering, USP
+                                </div>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2022–2023</span>
+                                <span class="timeline-badge">Research</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Autonomy software for a robot that sprays pesticide only where needed, in cotton and other row crops in Mato Grosso, Brazil.</p>
+                            <div class="achievements">
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Perception, localization, mapping, path planning, obstacle avoidance and motion control
+                                </div>
+                                <div class="achievement">
+                                    <span class="ach-arrow">→</span>
+                                    Sensors: LiDAR, GNSS/RTK, IMU and stereo cameras, plus deep learning for perception
+                                </div>
+                            </div>
+                            <div class="timeline-tech-tags">
+                                <span class="tt">ROS</span>
+                                <span class="tt">C++</span>
+                                <span class="tt">Python</span>
+                                <span class="tt">LiDAR</span>
+                                <span class="tt">GNSS/RTK</span>
+                                <span class="tt">Deep Learning</span>
                             </div>
                         </div>
                     </div>
@@ -1915,19 +2034,19 @@
                     <div class="timeline-content">
                         <div class="timeline-top">
                             <div>
-                                <h3 class="timeline-role">PhD — Mechanical Engineering</h3>
+                                <h3 class="timeline-role">PhD in Mechanical Engineering</h3>
                                 <div class="timeline-company">
                                     <span class="company-dot company-dot-edu"></span>
                                     University of São Paulo (USP)
                                 </div>
                             </div>
                             <div class="timeline-meta">
-                                <span class="timeline-date">Doctor of Philosophy</span>
+                                <span class="timeline-date">2018–2022</span>
                                 <span class="timeline-badge timeline-badge-edu">Education</span>
                             </div>
                         </div>
                         <div class="timeline-body">
-                            <p>Doctoral research in Mechanical Engineering at one of Latin America's leading research universities, with focus on robotics, autonomous systems, and applied engineering for real-world environments.</p>
+                            <p>PhD at the São Carlos School of Engineering. I studied how agricultural robots (TerraSentia, Mirã 2.0) can tell when a sensor is failing and pick a different navigation strategy, using LiDAR scene classification and machine learning.</p>
                             <div class="timeline-tech-tags">
                                 <span class="tt">Mechanical Engineering</span>
                                 <span class="tt">Robotics</span>
@@ -1938,6 +2057,92 @@
                     </div>
                 </div>
 
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot timeline-dot-edu"></div>
+                        <div class="timeline-line-v"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-top">
+                            <div>
+                                <h3 class="timeline-role">MBA in Data Science and Analytics</h3>
+                                <div class="timeline-company">
+                                    <span class="company-dot company-dot-edu"></span>
+                                    ESALQ, University of São Paulo
+                                </div>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2021–2022</span>
+                                <span class="timeline-badge timeline-badge-edu">Education</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Statistics, data science and machine learning. My thesis mapped crime hotspots around the USP São Carlos campus with Local Moran's I.</p>
+                            <div class="timeline-tech-tags">
+                                <span class="tt">Data Science</span>
+                                <span class="tt">Statistics</span>
+                                <span class="tt">Spatial Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot timeline-dot-edu"></div>
+                        <div class="timeline-line-v"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-top">
+                            <div>
+                                <h3 class="timeline-role">M.Sc. in Mechanical Engineering</h3>
+                                <div class="timeline-company">
+                                    <span class="company-dot company-dot-edu"></span>
+                                    São Carlos School of Engineering, USP
+                                </div>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2015–2017</span>
+                                <span class="timeline-badge timeline-badge-edu">Education</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Built a data acquisition system for vibration, temperature and acoustic emission on a CNC lathe, and used the signals to classify the cutting parameters and the material being cut.</p>
+                            <div class="timeline-tech-tags">
+                                <span class="tt">Signal Processing</span>
+                                <span class="tt">Data Acquisition</span>
+                                <span class="tt">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot timeline-dot-edu"></div>
+                        <div class="timeline-line-v"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-top">
+                            <div>
+                                <h3 class="timeline-role">B.Eng. Mechanical Engineering · Assoc. Degree Industrial Mechatronics</h3>
+                                <div class="timeline-company">
+                                    <span class="company-dot company-dot-edu"></span>
+                                    Federal Institute of São Paulo (IFSP), Araraquara
+                                </div>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2012–2022</span>
+                                <span class="timeline-badge timeline-badge-edu">Education</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p>B.Eng. in Mechanical Engineering (2017–2022) and Associate Degree in Industrial Mechatronics (2012–2014).</p>
+                            <div class="timeline-tech-tags">
+                                <span class="tt">Mechatronics</span>
+                                <span class="tt">Mechanical Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1946,7 +2151,7 @@
     <section class="section" id="publications">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// 05 — publications</span>
+                <span class="section-tag">// 05 · publications</span>
                 <h2 class="section-title">Academic Publications</h2>
                 <p class="section-sub">
                     Peer-reviewed research in robotics, autonomous navigation, and agricultural systems.
@@ -2065,11 +2270,11 @@
                     </div>
                 </article>
 
-                <!-- 0 citations — recent/notable -->
+                <!-- 0 citations, recent/notable -->
                 <article class="pub-card reveal">
                     <div class="pub-left">
                         <div class="pub-citations pub-citations-new">
-                            <span class="pub-cite-num">—</span>
+                            <span class="pub-cite-num">0</span>
                             <span class="pub-cite-label">new</span>
                         </div>
                     </div>
@@ -2095,7 +2300,7 @@
                 <article class="pub-card reveal">
                     <div class="pub-left">
                         <div class="pub-citations pub-citations-new">
-                            <span class="pub-cite-num">—</span>
+                            <span class="pub-cite-num">0</span>
                             <span class="pub-cite-label">new</span>
                         </div>
                     </div>
@@ -2131,7 +2336,7 @@
     <section class="section section-alt" id="research">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// 06 — research</span>
+                <span class="section-tag">// 06 · research</span>
                 <h2 class="section-title">Technical Notes</h2>
                 <p class="section-sub">Engineering insights from real-world robotics development</p>
             </div>
@@ -2180,7 +2385,7 @@
     <section class="section section-alt" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// 07 — contact</span>
+                <span class="section-tag">// 07 · contact</span>
                 <h2 class="section-title">Establish Connection</h2>
             </div>
             <div class="contact-grid">
@@ -2236,7 +2441,7 @@
                         </div>
                         <div class="status-row">
                             <span class="pulse-dot pulse-green"></span>
-                            <span>Located: USA</span>
+                            <span>Located: São Carlos, SP, Brazil</span>
                         </div>
                     </div>
                 </div>
@@ -2254,9 +2459,9 @@
                     <span class="nav-logo-bracket">]</span>
                 </div>
                 <div class="footer-center">
-                    <p>Leonardo Bonacini — Senior Robotics Engineer</p>
+                    <p>Leonardo Bonacini · Robotics Engineer</p>
                     <p class="footer-sub">Built with precision. Deployed in the field.</p>
-                    <p class="footer-visits" id="visitCounter">Visits: <span id="visitCount">—</span></p>
+                    <p class="footer-visits" id="visitCounter">Visits: <span id="visitCount">...</span></p>
                 </div>
                 <div class="footer-right">
                     <a href="https://github.com/leo-bonacini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
