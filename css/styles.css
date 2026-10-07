@@ -1,6 +1,4 @@
-/* =============================================
-   BASE & RESET
-   ============================================= */
+/* Base & reset */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -52,15 +50,11 @@ ul {
     list-style: none;
 }
 
-/* =============================================
-   TYPOGRAPHY
-   ============================================= */
+/* Typography */
 .accent { color: var(--cyan); }
 .mono { font-family: var(--font-mono); }
 
-/* =============================================
-   LAYOUT
-   ============================================= */
+/* Layout */
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -101,9 +95,7 @@ ul {
     font-size: 16px;
 }
 
-/* =============================================
-   NAVIGATION
-   ============================================= */
+/* Navigation */
 .nav {
     position: fixed;
     top: 0;
@@ -195,9 +187,7 @@ ul {
     transition: all 0.3s;
 }
 
-/* =============================================
-   HERO
-   ============================================= */
+/* Hero */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -352,9 +342,7 @@ ul {
     50% { opacity: 1; transform: scaleY(0.6); }
 }
 
-/* =============================================
-   BUTTONS
-   ============================================= */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -408,9 +396,7 @@ ul {
     transform: translateY(-1px);
 }
 
-/* =============================================
-   PULSE DOT
-   ============================================= */
+/* Pulse dot */
 .pulse-dot {
     display: inline-block;
     width: 7px;
@@ -442,9 +428,7 @@ ul {
     100% { transform: scale(2.5); opacity: 0; }
 }
 
-/* =============================================
-   ABOUT SECTION
-   ============================================= */
+/* About section */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -586,9 +570,7 @@ ul {
     50% { opacity: 0; }
 }
 
-/* =============================================
-   PROFILE CARD
-   ============================================= */
+/* Profile card */
 .about-terminal-wrap {
     display: flex;
     flex-direction: column;
@@ -679,9 +661,7 @@ ul {
     background: rgba(0,212,255,0.05);
 }
 
-/* =============================================
-   SKILLS SECTION
-   ============================================= */
+/* Skills section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -751,9 +731,7 @@ ul {
     color: var(--cyan);
 }
 
-/* =============================================
-   PROJECT FILTER
-   ============================================= */
+/* Project filter */
 .filter-bar {
     display: flex;
     gap: 8px;
@@ -781,9 +759,7 @@ ul {
     background: rgba(0,212,255,0.06);
 }
 
-/* =============================================
-   PROJECT CARDS
-   ============================================= */
+/* Project cards */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -1014,9 +990,7 @@ ul {
 
 .plink-primary:hover { color: var(--cyan-dim); }
 
-/* =============================================
-   EXPERIENCE / TIMELINE
-   ============================================= */
+/* Experience / timeline */
 .timeline {
     position: relative;
 }
@@ -1175,9 +1149,7 @@ ul {
     color: var(--blue);
 }
 
-/* =============================================
-   PUBLICATIONS SECTION
-   ============================================= */
+/* Publications section */
 .scholar-profile-link {
     display: inline-flex;
     align-items: center;
@@ -1320,9 +1292,7 @@ ul {
     justify-content: center;
 }
 
-/* =============================================
-   RESEARCH SECTION
-   ============================================= */
+/* Research section */
 .research-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1395,9 +1365,7 @@ ul {
 
 .research-link:hover { letter-spacing: 0.02em; }
 
-/* =============================================
-   CONTACT SECTION
-   ============================================= */
+/* Contact section */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 340px;
@@ -1499,9 +1467,7 @@ ul {
 
 .status-row:last-child { border-bottom: none; }
 
-/* =============================================
-   FOOTER
-   ============================================= */
+/* Footer */
 .footer {
     border-top: 1px solid var(--border);
     padding: 36px 0;
@@ -1556,9 +1522,7 @@ ul {
 
 .footer-right a:hover { color: var(--text-secondary); }
 
-/* =============================================
-   SCROLL REVEAL ANIMATION
-   ============================================= */
+/* Scroll reveal animation */
 .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -1587,9 +1551,7 @@ ul {
 .research-grid .research-card:nth-child(3) { transition-delay: 120ms; }
 .research-grid .research-card:nth-child(4) { transition-delay: 180ms; }
 
-/* =============================================
-   RESPONSIVE
-   ============================================= */
+/* Responsive */
 @media (max-width: 960px) {
     .about-grid {
         grid-template-columns: 1fr;
@@ -1719,9 +1681,7 @@ ul {
     }
 }
 
-/* =============================================
-   SCROLLBAR
-   ============================================= */
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -1739,9 +1699,7 @@ ul {
     background: var(--text-muted);
 }
 
-/* =============================================
-   SELECTION
-   ============================================= */
+/* Selection */
 ::selection {
     background: rgba(0, 212, 255, 0.2);
     color: var(--cyan);

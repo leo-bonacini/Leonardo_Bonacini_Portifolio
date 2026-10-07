@@ -1,6 +1,4 @@
-/* =============================================
-   HERO CANVAS — Trajectory / SLAM Animation
-   ============================================= */
+/* Hero canvas: trajectory / SLAM animation */
 (function initCanvas() {
     const canvas = document.getElementById('heroCanvas');
     if (!canvas) return;
@@ -54,7 +52,7 @@
 
     for (let i = 0; i < NUM_AGENTS; i++) agents.push(createAgent());
 
-    function stepAgent(a, t) {
+    function stepAgent(a) {
         // Gentle wander
         a.vx += (Math.random() - 0.5) * 0.06;
         a.vy += (Math.random() - 0.5) * 0.06;
@@ -89,7 +87,7 @@
     function draw(t) {
         ctx.clearRect(0, 0, W, H);
 
-        // --- Grid dots ---
+        // Grid dots
         dots.forEach(d => {
             const pulse = 0.5 + 0.5 * Math.sin(t * 0.001 + d.phase);
             ctx.beginPath();
@@ -98,7 +96,7 @@
             ctx.fill();
         });
 
-        // --- Grid lines (very faint) ---
+        // Grid lines (very faint)
         ctx.strokeStyle = 'rgba(26,45,74,0.35)';
         ctx.lineWidth = 0.5;
         for (let x = GRID_SPACING; x < W; x += GRID_SPACING) {
@@ -108,9 +106,9 @@
             ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
         }
 
-        // --- Agents + trails ---
+        // Agents + trails
         agents.forEach(a => {
-            stepAgent(a, t);
+            stepAgent(a);
             const trail = a.trail;
             if (trail.length < 2) return;
 
@@ -136,7 +134,7 @@
             ctx.shadowBlur = 0;
         });
 
-        // --- Scan rings ---
+        // Scan rings
         for (let i = scans.length - 1; i >= 0; i--) {
             const s = scans[i];
             s.r += 1.4;
@@ -167,9 +165,7 @@
     animId = requestAnimationFrame(draw);
 })();
 
-/* =============================================
-   NAV — scroll behavior + mobile toggle
-   ============================================= */
+/* Nav: scroll behavior + mobile toggle */
 (function initNav() {
     const nav = document.getElementById('nav');
     const toggle = document.getElementById('navToggle');
@@ -205,9 +201,7 @@
     sections.forEach(s => observer.observe(s));
 })();
 
-/* =============================================
-   SCROLL REVEAL
-   ============================================= */
+/* Scroll reveal */
 (function initReveal() {
     const els = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver(entries => {
@@ -222,9 +216,7 @@
     els.forEach(el => obs.observe(el));
 })();
 
-/* =============================================
-   PROJECT FILTER
-   ============================================= */
+/* Project filter */
 (function initFilter() {
     const btns = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.project-card');
@@ -248,9 +240,7 @@
     });
 })();
 
-/* =============================================
-   SMOOTH ANCHOR SCROLL
-   ============================================= */
+/* Smooth anchor scroll */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
         const href = anchor.getAttribute('href');
@@ -264,9 +254,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/* =============================================
-   VISITOR COUNTER
-   ============================================= */
+/* Visitor counter */
 (function initVisitCounter() {
     const el = document.getElementById('visitCount');
     if (!el) return;

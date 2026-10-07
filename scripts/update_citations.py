@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Check (and optionally apply) citation count updates from Google Scholar.
-
-Run on demand — not scheduled. Fetches the public Scholar profile, matches
-each paper to a <article class="pub-card"> block in index.html by title,
-and reports any citation counts that changed.
+"""Compare citation counts in index.html with Google Scholar.
 
 Usage:
     python3 scripts/update_citations.py            # dry run, prints a report
@@ -31,8 +27,7 @@ ARTICLE_RE = re.compile(r'<article class="pub-card[^"]*">.*?</article>', re.DOTA
 TITLE_RE = re.compile(r'<h3 class="pub-title">(.*?)</h3>', re.DOTALL)
 NUM_RE = re.compile(r'(<span class="pub-cite-num">)(.*?)(</span>)', re.DOTALL)
 LABEL_RE = re.compile(r'(<span class="pub-cite-label">)(.*?)(</span>)', re.DOTALL)
-# Matches the "<!-- N citations -->" marker comment just above an <article>,
-# capturing the number so it can be kept in sync too.
+# "<!-- N citations -->" comment above each <article>
 PRECEDING_COMMENT_RE = re.compile(r'<!--\s*(\d+)( citations?)([^>]*?)-->\s*$', re.DOTALL)
 
 
@@ -50,8 +45,7 @@ def fetch_scholar_papers() -> list[dict]:
     rows = soup.select("tr.gsc_a_tr")
     if not rows:
         raise RuntimeError(
-            "No publication rows found — Scholar may have served a CAPTCHA "
-            "or changed its page layout. Try again later or check manually."
+            "No publication rows found (CAPTCHA or layout change?)"
         )
     papers = []
     for row in rows:
@@ -67,8 +61,6 @@ def fetch_scholar_papers() -> list[dict]:
 
 
 def parse_index_articles(html: str) -> list[dict]:
-    """Extract one entry per <article class="pub-card">, with absolute file
-    offsets for its citation-number span so edits can be applied precisely."""
     articles = []
     for art_match in ARTICLE_RE.finditer(html):
         block = art_match.group(0)
@@ -109,8 +101,7 @@ def parse_index_articles(html: str) -> list[dict]:
 
 
 def best_match(norm_title: str, papers: list[dict]) -> dict | None:
-    # Prefer an exact normalized match; among duplicates (Scholar sometimes
-    # lists the same paper twice under different venues) take the highest count.
+    # Scholar can list the same paper twice, keep the highest count
     exact = [p for p in papers if p["norm"] == norm_title]
     if exact:
         return max(exact, key=lambda p: p["citations"])
@@ -149,7 +140,7 @@ def main():
             print(f"  - {t}")
 
     if not changes:
-        print("\nAll citation counts already match Google Scholar. Nothing to do.")
+        print("\nNo changes.")
         return
 
     print("\nCitation count changes:")
@@ -157,10 +148,10 @@ def main():
         print(f"  {art['current']:>3} -> {match['citations']:<3}  {art['title']}")
 
     if not args.apply:
-        print("\nDry run only. Re-run with --apply to write these into index.html.")
+        print("\nDry run, use --apply to write index.html.")
         return
 
-    # Apply edits back-to-front so earlier offsets stay valid as the string shifts.
+    # back to front so offsets stay valid
     edits = []
     for art, match in changes:
         new_num = str(match["citations"])
@@ -179,8 +170,6 @@ def main():
 
     INDEX_HTML.write_text(html, encoding="utf-8")
     print(f"\nUpdated {len(changes)} citation count(s) in index.html.")
-    print("Note: the 'new' badge (pub-citations-new class / em-dash) for previously")
-    print("uncited papers was not auto-changed — check the diff and adjust by hand.")
 
 
 if __name__ == "__main__":
