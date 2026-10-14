@@ -1228,34 +1228,47 @@
                         <span class="sys-id">SYS-017</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
-                    <h3 class="project-title">Tic-Tac-Toe</h3>
-                    <p class="project-sub">Single-file browser game against a rule based bot with three difficulty levels: no build step, no dependencies, no installation</p>
+                    <h3 class="project-title">Game Library</h3>
+                    <p class="project-sub">Browser games in one repository: board games against bots (Tic-Tac-Toe, Battleship, Ludo) and logic puzzles (Minesweeper, Sudoku), with a shared layout and light/dark theme</p>
                     <div class="arch-diagram">
                         <div class="arch-row">
-                            <div class="arch-node node-in">Difficulty</div>
-                            <div class="arch-node node-in">First Move</div>
-                            <div class="arch-node node-in">Player Input</div>
+                            <div class="arch-node node-in">Library Page</div>
+                            <div class="arch-node node-in">Search &amp; Tags</div>
+                            <div class="arch-node node-in">Game Registry</div>
                         </div>
                         <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-proc">Bot Strategy Engine (random · win/block heuristics · minimax)</div>
+                        <div class="arch-node node-proc">Shared Layout (top bar · theme tokens · light/dark)</div>
                         <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-out">Board Update · Winning Line Highlight · Round Summary</div>
+                        <div class="arch-node node-out">Board Games · Logic Puzzles · New Game Template</div>
                     </div>
                     <div class="project-details">
                         <div class="detail-block">
                             <span class="detail-label">Problem</span>
-                            <p>Play Tic-Tac-Toe against a computer opponent entirely in the browser, in one HTML file with zero dependencies. The difficulty setting swaps the bot strategy: random moves (easy), win/block heuristics (medium), or full minimax search (hard), which plays perfectly and can never be beaten.</p>
+                            <p>Keep several small browser games in one place, with the same look and navigation, and make adding a new game a one-command job. Every game is plain HTML, CSS and JavaScript with no build step, and runs on its own or from the library page.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Board Games</span>
+                            <div class="method-tags">
+                                <span class="mtag">Tic-Tac-Toe (random, heuristic, minimax bot)</span>
+                                <span class="mtag">Battleship (ship placement, hunting bot)</span>
+                                <span class="mtag">Ludo (4 players, 3 bots)</span>
+                            </div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Logic Puzzles</span>
+                            <div class="method-tags">
+                                <span class="mtag">Minesweeper (presets, custom boards, stats)</span>
+                                <span class="mtag">Sudoku (unique-solution generator, notes, hints, daily challenge)</span>
+                            </div>
                         </div>
                         <div class="detail-block">
                             <span class="detail-label">Features</span>
                             <div class="method-tags">
-                                <span class="mtag">3 Difficulty Levels</span>
-                                <span class="mtag">Minimax Perfect Play</span>
-                                <span class="mtag">Win/Block Heuristics</span>
-                                <span class="mtag">Setup Screen (difficulty · first move)</span>
-                                <span class="mtag">Winning Line Highlight</span>
-                                <span class="mtag">Keyboard Playable</span>
-                                <span class="mtag">Screen Reader Announcements</span>
+                                <span class="mtag">Shared Top Bar &amp; Back Navigation</span>
+                                <span class="mtag">One Light/Dark Theme for All Games</span>
+                                <span class="mtag">Search &amp; Tag Filters</span>
+                                <span class="mtag">New Game Scaffold Script</span>
+                                <span class="mtag">Keyboard &amp; Touch Support</span>
                             </div>
                         </div>
                         <div class="detail-block">
@@ -1264,203 +1277,24 @@
                                 <span class="mtag mtag-code">HTML</span>
                                 <span class="mtag mtag-code">CSS</span>
                                 <span class="mtag mtag-code">JavaScript</span>
+                                <span class="mtag mtag-code">Bash</span>
                             </div>
                         </div>
                         <div class="project-result">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Single HTML file · unbeatable hard mode (minimax) · fully keyboard accessible · works offline
+                            5 games · zero dependencies · no build step · works offline
                         </div>
                     </div>
                     <div class="project-card-footer">
-                        <a href="https://github.com/leo-bonacini/games-library/tree/main/games/tic-tac-toe" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
-                        <a href="https://leo-bonacini.github.io/games-library/games/tic-tac-toe/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                        <a href="https://github.com/leo-bonacini/game-library" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+                        <a href="https://leo-bonacini.github.io/game-library/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
                     </div>
                 </div>
 
                 <!-- SYS-018 -->
-                <div class="project-card reveal" data-tags="web games">
-                    <div class="project-card-top">
-                        <span class="sys-id">SYS-018</span>
-                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
-                    </div>
-                    <h3 class="project-title">Battleship</h3>
-                    <p class="project-sub">Complete Battleship game in a single HTML file with whole-ship SVG artwork and a bot with three difficulty levels: no libraries, no build step, no installation</p>
-                    <div class="arch-diagram">
-                        <div class="arch-row">
-                            <div class="arch-node node-in">Fleet Placement</div>
-                            <div class="arch-node node-in">Difficulty</div>
-                            <div class="arch-node node-in">Player Shots</div>
-                        </div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-proc">Bot Targeting Engine (random · neighbor hunt · full hunt and target)</div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-out">Board State · Fleet Panels · Wreck Reveal · Turn Status</div>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-block">
-                            <span class="detail-label">Problem</span>
-                            <p>Play full Battleship against a computer opponent entirely in the browser, in one HTML file with zero libraries. The hard bot runs a complete hunt and target strategy: it detects a ship's direction after a second hit, extends along the line, reverses when it runs off the end, and never abandons a wounded ship.</p>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Features</span>
-                            <div class="method-tags">
-                                <span class="mtag">3 Bot Difficulties</span>
-                                <span class="mtag">Hunt and Target AI</span>
-                                <span class="mtag">Manual + Auto Fleet Placement</span>
-                                <span class="mtag">Live Placement Preview</span>
-                                <span class="mtag">Whole-ship SVG Artwork</span>
-                                <span class="mtag">Wreck Reveal on Sink</span>
-                                <span class="mtag">Keyboard Play (R to rotate)</span>
-                                <span class="mtag">Touch Support</span>
-                                <span class="mtag">Screen Reader Announcements</span>
-                                <span class="mtag">Responsive Board</span>
-                            </div>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Stack</span>
-                            <div class="method-tags">
-                                <span class="mtag mtag-code">HTML</span>
-                                <span class="mtag mtag-code">CSS</span>
-                                <span class="mtag mtag-code">JavaScript</span>
-                                <span class="mtag mtag-code">SVG</span>
-                            </div>
-                        </div>
-                        <div class="project-result">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Single HTML file · zero libraries · plays by mouse, keyboard, or touch · works offline
-                        </div>
-                    </div>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/leo-bonacini/games-library/tree/main/games/battleship" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
-                        <a href="https://leo-bonacini.github.io/games-library/games/battleship/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-                    </div>
-                </div>
-
-                <!-- SYS-019 -->
-                <div class="project-card reveal" data-tags="web games">
-                    <div class="project-card-top">
-                        <span class="sys-id">SYS-019</span>
-                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
-                    </div>
-                    <h3 class="project-title">Minesweeper</h3>
-                    <p class="project-sub">Modern, dependency-free Minesweeper with six themes, synthesized sound, and full accessibility: no frameworks, no build step</p>
-                    <div class="arch-diagram">
-                        <div class="arch-row">
-                            <div class="arch-node node-in">Difficulty Preset</div>
-                            <div class="arch-node node-in">Seed</div>
-                            <div class="arch-node node-in">Player Input</div>
-                        </div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-proc">Board Engine (safe first click · flood-fill · chord reveal)</div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-out">Grid Render · Stats Tracking · Sound & Particle Effects</div>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-block">
-                            <span class="detail-label">Problem</span>
-                            <p>Play classic Minesweeper entirely in the browser, in plain HTML5/CSS3/ES6 modules with zero frameworks and no build step. The board guarantees a safe first click, supports recursive flood-fill reveal and chord-reveal, and generates deterministically from an optional seed.</p>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Features</span>
-                            <div class="method-tags">
-                                <span class="mtag">4 Difficulty Presets + Custom</span>
-                                <span class="mtag">Guaranteed-safe First Click</span>
-                                <span class="mtag">Flood-fill & Chord Reveal</span>
-                                <span class="mtag">6 Themes</span>
-                                <span class="mtag">Synthesized Sound (Web Audio)</span>
-                                <span class="mtag">Particle Effects</span>
-                                <span class="mtag">Full Stats in localStorage</span>
-                                <span class="mtag">Seeded Board Generation</span>
-                                <span class="mtag">Hint Button</span>
-                                <span class="mtag">Full Keyboard Play</span>
-                                <span class="mtag">Mobile Support (tap · long-press · Flag Mode)</span>
-                            </div>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Stack</span>
-                            <div class="method-tags">
-                                <span class="mtag mtag-code">HTML</span>
-                                <span class="mtag mtag-code">CSS</span>
-                                <span class="mtag mtag-code">JavaScript (ES6 modules)</span>
-                                <span class="mtag mtag-code">Web Audio API</span>
-                            </div>
-                        </div>
-                        <div class="project-result">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Zero dependencies · six themes · full keyboard & mobile accessibility · works offline
-                        </div>
-                    </div>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/leo-bonacini/games-library/tree/main/games/minesweeper" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
-                        <a href="https://leo-bonacini.github.io/games-library/games/minesweeper/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-                    </div>
-                </div>
-
-                <!-- SYS-020 -->
-                <div class="project-card reveal" data-tags="web games">
-                    <div class="project-card-top">
-                        <span class="sys-id">SYS-020</span>
-                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
-                    </div>
-                    <h3 class="project-title">Sudoku</h3>
-                    <p class="project-sub">Modern, dependency-free Sudoku with pencil-mark notes, a daily challenge, and full stats tracking: no frameworks, no build step</p>
-                    <div class="arch-diagram">
-                        <div class="arch-row">
-                            <div class="arch-node node-in">Difficulty Level</div>
-                            <div class="arch-node node-in">Daily Seed</div>
-                            <div class="arch-node node-in">Player Input</div>
-                        </div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-proc">Generator & Solver (backtracking · unique-solution check · hint engine)</div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-out">Grid Render · Notes & Undo/Redo · Stats Tracking</div>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-block">
-                            <span class="detail-label">Problem</span>
-                            <p>Play classic Sudoku entirely in the browser, in plain HTML5/CSS3/ES6 with zero frameworks and no build step. A backtracking solver with candidate-based pruning powers board generation (with a guaranteed unique solution), solvability checks, and a limited hint system.</p>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Features</span>
-                            <div class="method-tags">
-                                <span class="mtag">4 Difficulty Levels (Unique Solution)</span>
-                                <span class="mtag">Backtracking Solver & Generator</span>
-                                <span class="mtag">Pencil-mark Notes (auto-cleanup)</span>
-                                <span class="mtag">Full Undo/Redo History</span>
-                                <span class="mtag">Limited Hints (3 per game)</span>
-                                <span class="mtag">Conflict & Mistake Highlighting</span>
-                                <span class="mtag">Timer with Per-difficulty Best Times</span>
-                                <span class="mtag">Auto-save to localStorage</span>
-                                <span class="mtag">Daily Challenge (seeded)</span>
-                                <span class="mtag">Export/Import via 81-char Code</span>
-                                <span class="mtag">Dark, Light & High-contrast Themes</span>
-                                <span class="mtag">Full Keyboard Play</span>
-                            </div>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Stack</span>
-                            <div class="method-tags">
-                                <span class="mtag mtag-code">HTML</span>
-                                <span class="mtag mtag-code">CSS</span>
-                                <span class="mtag mtag-code">JavaScript (ES6+)</span>
-                                <span class="mtag mtag-code">Web Audio API</span>
-                            </div>
-                        </div>
-                        <div class="project-result">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Zero dependencies · guaranteed unique-solution boards · daily challenge · works offline
-                        </div>
-                    </div>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/leo-bonacini/games-library/tree/main/games/sudoku" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
-                        <a href="https://leo-bonacini.github.io/games-library/games/sudoku/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-                    </div>
-                </div>
-
-                <!-- SYS-021 -->
                 <div class="project-card reveal" data-tags="web robotics">
                     <div class="project-card-top">
-                        <span class="sys-id">SYS-021</span>
+                        <span class="sys-id">SYS-018</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">Interview Preparation</h3>
@@ -1514,68 +1348,10 @@
                     </div>
                 </div>
 
-                <!-- SYS-022 -->
-                <div class="project-card reveal" data-tags="web games">
-                    <div class="project-card-top">
-                        <span class="sys-id">SYS-022</span>
-                        <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
-                    </div>
-                    <h3 class="project-title">Ludo</h3>
-                    <p class="project-sub">Single-file, browser-based Ludo against three bots, with token animations, keyboard controls, and full undo support: no frameworks, no build step</p>
-                    <div class="arch-diagram">
-                        <div class="arch-row">
-                            <div class="arch-node node-in">Color Choice</div>
-                            <div class="arch-node node-in">Dice Roll</div>
-                            <div class="arch-node node-in">Token Select</div>
-                        </div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-proc">Turn Engine (capture · block · safe cell · three-6 forfeit)</div>
-                        <div class="arch-arrow-down">↓</div>
-                        <div class="arch-node node-out">Board Render · Bot AI · Turn Log & Stats</div>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-block">
-                            <span class="detail-label">Problem</span>
-                            <p>Play classic 4-player Ludo entirely in the browser against computer-controlled opponents, in plain HTML5/CSS3/ES6 with zero frameworks and no build step. The engine handles token capture, safe cells, two-token blocks, and the three-6 forfeit rule, with full undo and a live turn log.</p>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Features</span>
-                            <div class="method-tags">
-                                <span class="mtag">4-Player Board (Red · Green · Yellow · Blue)</span>
-                                <span class="mtag">Play vs 3 Bots</span>
-                                <span class="mtag">Smooth Token Animations</span>
-                                <span class="mtag">Keyboard Controls (Space · Arrows · Enter)</span>
-                                <span class="mtag">Capture, Block & Safe Cell Rules</span>
-                                <span class="mtag">Three-6 Forfeit</span>
-                                <span class="mtag">Undo Support</span>
-                                <span class="mtag">Dice History & Turn Log</span>
-                                <span class="mtag">Light/Dark Theme</span>
-                                <span class="mtag">Sound Effects</span>
-                            </div>
-                        </div>
-                        <div class="detail-block">
-                            <span class="detail-label">Stack</span>
-                            <div class="method-tags">
-                                <span class="mtag mtag-code">HTML</span>
-                                <span class="mtag mtag-code">CSS</span>
-                                <span class="mtag mtag-code">JavaScript</span>
-                            </div>
-                        </div>
-                        <div class="project-result">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12V2M2 7l5-5 5 5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Zero dependencies · full keyboard support · undo & turn log · works offline
-                        </div>
-                    </div>
-                    <div class="project-card-footer">
-                        <a href="https://github.com/leo-bonacini/games-library/tree/main/games/ludo" class="plink" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
-                        <a href="https://leo-bonacini.github.io/games-library/games/ludo/" class="plink plink-primary" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-                    </div>
-                </div>
-
-                <!-- SYS-023 -->
+                <!-- SYS-019 -->
                 <div class="project-card reveal" data-tags="web">
                     <div class="project-card-top">
-                        <span class="sys-id">SYS-023</span>
+                        <span class="sys-id">SYS-019</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">SVG Editor</h3>
@@ -1630,10 +1406,10 @@
                     </div>
                 </div>
 
-                <!-- SYS-024 -->
+                <!-- SYS-020 -->
                 <div class="project-card reveal" data-tags="web robotics">
                     <div class="project-card-top">
-                        <span class="sys-id">SYS-024</span>
+                        <span class="sys-id">SYS-020</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">Xylem</h3>
@@ -1688,10 +1464,10 @@
                     </div>
                 </div>
 
-                <!-- SYS-025 -->
+                <!-- SYS-021 -->
                 <div class="project-card reveal" data-tags="annotation">
                     <div class="project-card-top">
-                        <span class="sys-id">SYS-025</span>
+                        <span class="sys-id">SYS-021</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">GeoSketch</h3>
@@ -1745,10 +1521,10 @@
                     </div>
                 </div>
 
-                <!-- SYS-026 -->
+                <!-- SYS-022 -->
                 <div class="project-card reveal" data-tags="annotation">
                     <div class="project-card-top">
-                        <span class="sys-id">SYS-026</span>
+                        <span class="sys-id">SYS-022</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">LabelSketch</h3>
@@ -1802,10 +1578,10 @@
                     </div>
                 </div>
 
-                <!-- SYS-027 -->
+                <!-- SYS-023 -->
                 <div class="project-card reveal" data-tags="annotation">
                     <div class="project-card-top">
-                        <span class="sys-id">SYS-027</span>
+                        <span class="sys-id">SYS-023</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">AudioSketch</h3>
@@ -1860,10 +1636,10 @@
                     </div>
                 </div>
 
-                <!-- SYS-028 -->
+                <!-- SYS-024 -->
                 <div class="project-card reveal" data-tags="web">
                     <div class="project-card-top">
-                        <span class="sys-id">SYS-028</span>
+                        <span class="sys-id">SYS-024</span>
                         <span class="sys-status"><span class="pulse-dot pulse-green"></span>Open Source</span>
                     </div>
                     <h3 class="project-title">Fourier Epicycles</h3>
